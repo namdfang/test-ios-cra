@@ -50,7 +50,7 @@ const Header = ({ collapsed, changeCollapsed }) => {
         </Col>
         <Col>
           <Row justify="center">
-            <Col className="flex gap-1 items-center">
+            <Col className="flex gap-1 items-center" style={{ justifyContent: "end" }}>
               <p className="font-semibold">{profile?.username}</p>
               <Dropdown menu={{ items }} placement="bottomRight" arrow>
                 <Button type="text" className="py-0 hover:!bg-transparent">

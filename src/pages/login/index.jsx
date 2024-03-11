@@ -68,7 +68,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-[90%] md:w-[500px] mx-auto border-[1px] border-[#ccc] border-solid p-5 rounded-[6px] mt-[25vh]">
+    <div className=" mx-auto border-[1px] border-[#ccc] border-solid p-5 rounded-[6px] mt-[25vh]">
       <Form
         name="basic"
         labelCol={{

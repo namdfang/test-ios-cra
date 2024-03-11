@@ -33,16 +33,19 @@ const StoreForm = ({app_key, code}) => {
   }
 
   const onSubmit = (value) => {
+
+    const params = {
+      app_key: app_key,
+      auth_code: value.auth_code,
+      app_secret: c.APP_SECRET,
+      grant_type: c.GRANT_TYPE,
+      user_id: value?.user_id ? value.user_id : shopsByUser.users[0].user_id
+    }
+
     axios({
       method: 'get',
       url: `${c.API_TIKTOK_SHOP}/v2/token/get`,
-      params: {
-        app_key: app_key,
-        auth_code: value.auth_code,
-        app_secret: c.APP_SECRET,
-        grant_type: c.GRANT_TYPE,
-        user_id: value.user_id
-      }
+      params: params
     })
     .then(response => {
       console.log(">>> Success:", response);
@@ -59,7 +62,7 @@ const StoreForm = ({app_key, code}) => {
       alerts.error(err)
     }
 
-    createStore(value, onSuccess, onFail)
+    createStore(params, onSuccess, onFail)
   }
 
   return (
@@ -153,19 +156,23 @@ const StoreForm = ({app_key, code}) => {
               span: 24,
             }}
           >
-            <Select
+            <select
               // mode="multiple"
               placeholder="Hãy chọn store"
               // onChange={handleChange}
-              options={convertSellerOptions(shopsByUser.users)}
+              // options={convertSellerOptions(shopsByUser.users)}
               className='w-full'
-              filterOption={(input, options) => {
-                return (
-                  options.label.toLowerCase().indexOf(input.toLowerCase()) >= 0 ||
-                  options.value.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                );
-              }}
-            />
+            // filterOption={(input, options) => {
+            //   return (
+            //     options.label.toLowerCase().indexOf(input.toLowerCase()) >= 0 ||
+            //     options.value.toLowerCase().indexOf(input.toLowerCase()) >= 0
+            //   );
+            // }}
+            >
+              {shopsByUser?.users && shopsByUser.users.length ? shopsByUser.users.map((item, index) => (
+                <option key={index} value={item.user_id}>{item.user_name}</option>
+              )) : null}
+            </select>
           </Form.Item>
         </Col>
       </Row>

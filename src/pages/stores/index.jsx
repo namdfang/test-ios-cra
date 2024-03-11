@@ -153,6 +153,23 @@ const Stores = () => {
     else setShowModal(false)
   }, [app_key, code])
 
+  if (isShowModal) {
+    return (
+      <Modal
+        open={isShowModal}
+        onCancel={() => {
+          setShowModal(false)
+        }}
+        centered
+        footer={null}
+      // width={}
+      >
+        {!app_key && !code ? <StoreAuthorization /> : <StoreForm app_key={app_key} code={code} />}
+        <Button style={{ marginTop: "8px" }} className='w-full' ghost type='primary' onClick={() => setShowModal(false)}>quay về danh sách</Button>
+      </Modal>
+    )
+  }
+
   return (
     <Layout.Content className='mt-4 px-5'>
       {contextHolder}
@@ -173,7 +190,7 @@ const Stores = () => {
         loading={loading}
       />
 
-      <Modal
+      {/* <Modal
         open={isShowModal}
         onCancel={() => {
           setShowModal(false)
@@ -183,8 +200,8 @@ const Stores = () => {
         width={600}
       >
         {!app_key && !code ? <StoreAuthorization/> : <StoreForm app_key={app_key} code={code} />}
-        
-      </Modal>
+
+      </Modal> */}
     </Layout.Content>
   )
 }
