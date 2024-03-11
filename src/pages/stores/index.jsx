@@ -66,9 +66,9 @@ const Stores = () => {
       render: (name, store) => (
         <p
           className='text-[#0e2482] font-medium cursor-pointer'
-          onClick={() => {
-            navigate(`/shops/${store.id}`, { state: { store }})
-          }}
+          // onClick={() => {
+          //   navigate(`/shops/${store.id}`, { state: { store }})
+          // }}
         >
           {name}
         </p>
@@ -81,9 +81,9 @@ const Stores = () => {
       render: (code, store) => (
         <p
           className='text-[#0e2482] font-medium cursor-pointer'
-          onClick={() => {
-            navigate(`/shops/${store.id}`, { state: { store }})
-          }}
+          // onClick={() => {
+          //   navigate(`/shops/${store.id}`, { state: { store }})
+          // }}
         >
           {code}
         </p>
@@ -116,13 +116,13 @@ const Stores = () => {
     //     </p>
     //   ),
     // },
-    {
-      title: '',
-      key: 'action',
-      // fixed: 'right',
-      align: 'center',
-      render: (_, store) => <Button size='small' icon={<EyeOutlined />} onClick={() => handleRefreshToken(store.id)}>Gia hạn</Button>,
-    },
+    // {
+    //   title: '',
+    //   key: 'action',
+    //   // fixed: 'right',
+    //   align: 'center',
+    //   render: (_, store) => <Button size='small' icon={<EyeOutlined />} onClick={() => handleRefreshToken(store.id)}>Gia hạn</Button>,
+    // },
   ]
 
   const onSearch = (e) => {

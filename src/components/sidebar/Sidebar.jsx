@@ -49,16 +49,16 @@ const Sidebar = ({ collapsed }) => {
   }, [navigate]);
 
   const initMenuSidebar = [
-    {
-      key: "/",
-      icon: <DashboardOutlined style={{ color: "#4595ef" }} />,
-      label: (
-        <Link className="flex justify-between" to="/">
-          Tổng quan
-        </Link>
-      ),
-      hasPer: hasManagerPermission() || hasSellerPermission() || hasDesignerPermission()
-    },
+    // {
+    //   key: "/",
+    //   icon: <DashboardOutlined style={{ color: "#4595ef" }} />,
+    //   label: (
+    //     <Link className="flex justify-between" to="/">
+    //       Tổng quan
+    //     </Link>
+    //   ),
+    //   hasPer: hasManagerPermission() || hasSellerPermission() || hasDesignerPermission()
+    // },
     {
       key: "/shops",
       icon: <ShopOutlined style={{ color: "red" }} />,
@@ -71,48 +71,48 @@ const Sidebar = ({ collapsed }) => {
       hasPer: hasManagerPermission() || hasSellerPermission(),
       // children: initialChildrenShopTab()
     },
-    {
-      key: "/templates",
-      icon: <FileDoneOutlined style={{ color: "#9a10d0" }} />,
-      label: (
-        <Link className="flex justify-between" to="templates">
-          Quản lý template
-        </Link>
-      ),
-      hasPer: hasManagerPermission() || hasSellerPermission()
-    },
-    {
-      key: "/users",
-      icon: <UsergroupAddOutlined style={{ color: "#52dc07" }} />,
-      label: (
-        <Link className="flex justify-between" to="users">Quản lý user</Link>
-      ),
-      hasPer: hasManagerPermission()
-    },
-    {
-      key: "/crawl",
-      icon: <FinanceIcon style={{ color: "#230fff" }} className="w-[16px]" />,
-      label: (
-        <Link className="flex justify-between" to="crawl">Crawl products</Link>
-      ),
-      hasPer: hasManagerPermission() || hasSellerPermission()
-    },
-    {
-      key: "/check-label",
-      icon: <SearchOutlined style={{ color: "#ff800f" }} className="w-[16px]" />,
-      label: (
-        <Link className="flex justify-between" to="/check-label">Kiếm tra Label đã mua</Link>
-      ),
-      hasPer: hasManagerPermission() || hasSellerPermission()
-    },
-    {
-      key: "/design-sku",
-      icon: <AntDesignOutlined style={{ color: "#0f2aff" }} className="w-[16px]" />,
-      label: (
-        <Link className="flex justify-between" to="/design-sku">Design Sku</Link>
-      ),
-      hasPer: hasDesignerPermission()
-    },
+    // {
+    //   key: "/templates",
+    //   icon: <FileDoneOutlined style={{ color: "#9a10d0" }} />,
+    //   label: (
+    //     <Link className="flex justify-between" to="templates">
+    //       Quản lý template
+    //     </Link>
+    //   ),
+    //   hasPer: hasManagerPermission() || hasSellerPermission()
+    // },
+    // {
+    //   key: "/users",
+    //   icon: <UsergroupAddOutlined style={{ color: "#52dc07" }} />,
+    //   label: (
+    //     <Link className="flex justify-between" to="users">Quản lý user</Link>
+    //   ),
+    //   hasPer: hasManagerPermission()
+    // },
+    // {
+    //   key: "/crawl",
+    //   icon: <FinanceIcon style={{ color: "#230fff" }} className="w-[16px]" />,
+    //   label: (
+    //     <Link className="flex justify-between" to="crawl">Crawl products</Link>
+    //   ),
+    //   hasPer: hasManagerPermission() || hasSellerPermission()
+    // },
+    // {
+    //   key: "/check-label",
+    //   icon: <SearchOutlined style={{ color: "#ff800f" }} className="w-[16px]" />,
+    //   label: (
+    //     <Link className="flex justify-between" to="/check-label">Kiếm tra Label đã mua</Link>
+    //   ),
+    //   hasPer: hasManagerPermission() || hasSellerPermission()
+    // },
+    // {
+    //   key: "/design-sku",
+    //   icon: <AntDesignOutlined style={{ color: "#0f2aff" }} className="w-[16px]" />,
+    //   label: (
+    //     <Link className="flex justify-between" to="/design-sku">Design Sku</Link>
+    //   ),
+    //   hasPer: hasDesignerPermission()
+    // },
   ];
 
   useEffect(() => {

@@ -69,10 +69,7 @@ export default function ModalUserForm({
       const newData = {
         ...userSelected,
         username: userSelected?.user_name,
-        shops: userSelected?.shops?.map((item) => ({
-          label: item.name,
-          value: item.id,
-        })),
+        shops: userSelected?.shops?.map((item) => item.id),
       };
       form.setFieldsValue(newData);
     }

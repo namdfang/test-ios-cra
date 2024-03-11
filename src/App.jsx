@@ -81,7 +81,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<MainLayout />}>
-              <Route
+              {/* <Route
                 path={PATH.HOME}
                 element={
                   <Suspense fallback={<Loading />}>
@@ -96,10 +96,10 @@ const App = () => {
                     <Template />
                   </Suspense>
                 }
-              />
+              /> */}
               
               {/* Sellers */}
-              <Route
+              {/* <Route
                 path="/sellers"
                 element={
                   <Suspense fallback={<Loading />}>
@@ -114,7 +114,7 @@ const App = () => {
                     <Crawl />
                   </Suspense>
                 }
-              />
+              /> */}
               {/* Stores */}
               <Route
                 path="/shops"
@@ -132,16 +132,16 @@ const App = () => {
                   </Suspense>
                 }
               />
-              <Route
+              {/* <Route
                 path="/shops/:id/add-many-products"
                 element={
                   <Suspense fallback={<Loading />}>
                     <MultiAddProducts />
                   </Suspense>
                 }
-              />
+              /> */}
               {/* Products */}
-              <Route
+              {/* <Route
                 path="/shops/:id/products"
                 element={
                   <Suspense fallback={<Loading />}>
@@ -183,17 +183,17 @@ const App = () => {
                     <ProductCreate />
                   </Suspense>
                 }
-              />
+              /> */}
 
               {/* brands */}
-              <Route
+              {/* <Route
                 path="/shops/:id/brands"
                 element={
                   <Suspense fallback={<Loading />}>
                     <Brands />
                   </Suspense>
                 }
-              />
+              /> */}
 
               {/* orders */}
               {/* <Route
@@ -213,7 +213,7 @@ const App = () => {
                 }
               ></Route> */}
 
-              <Route
+              {/* <Route
                 path="/shops/:id/orders"
                 element={
                   <Suspense fallback={<Loading />}>
@@ -265,20 +265,20 @@ const App = () => {
                     <OrderCheckDesign />
                   </Suspense>
                 }
-              />
+              /> */}
 
               {/* Design Sku */}
-              <Route
+              {/* <Route
                 path="design-sku"
                 element={
                   <Suspense fallback={<Loading />}>
                     <DesignSku />
                   </Suspense>
                 }
-              ></Route>
+              ></Route> */}
 
               {/* Vouchers */}
-              <Route
+              {/* <Route
                 path="/vouchers"
                 element={
                   <Suspense fallback={<Loading />}>
@@ -287,10 +287,10 @@ const App = () => {
                 }
               />
               <Route path="/vouchers/create" element={<VoucherForm />} />
-              <Route path="/vouchers/:voucherId" element={<VoucherForm />} />
+              <Route path="/vouchers/:voucherId" element={<VoucherForm />} /> */}
 
               {/* Users */}
-              <Route
+              {/* <Route
                 path="/users"
                 element={
                   <Suspense fallback={<Loading />}>
@@ -314,27 +314,27 @@ const App = () => {
                     <Account />
                   </Suspense>
                 }
-              />
+              /> */}
 
               {/* Categories */}
-              <Route
+              {/* <Route
                 path="shops/:id/categories"
                 element={
                   <Suspense fallback={<Loading />}>
                     <Categories />
                   </Suspense>
                 }
-              />
+              /> */}
 
               {/* Settings */}
-              <Route
+              {/* <Route
                 path="/theme"
                 element={
                   <Suspense fallback={<Loading />}>
                     <HomepageInterface />
                   </Suspense>
                 }
-              />
+              /> */}
             </Route>
           </Route>
           <Route path="/login" element={<Login />} />
