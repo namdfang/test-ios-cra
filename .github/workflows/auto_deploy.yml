@@ -47,11 +47,11 @@ jobs:
 
   build:
     runs-on: self-hosted
+    needs: check_out
 
     steps:
 
       - name: Kill the running container with name ios-cra
-        needs: check_out
         run: |
           docker stop ios-cra || true
           docker rm ios-cra || true
