@@ -33,6 +33,7 @@ const StoreForm = ({app_key, code}) => {
   }
 
   const onSubmit = (value) => {
+    console.log('value: ', value);
 
     const params = {
       app_key: app_key,
@@ -61,8 +62,14 @@ const StoreForm = ({app_key, code}) => {
     const onFail = (err) => {
       alerts.error(err)
     }
+    const paramsCreate = {
+      auth_code: value.auth_code,
+      shop_name: value.shop_name,
+      shop_code: value.shop_code,
+      user_id: value?.user_id ? value.user_id : shopsByUser.users[0].user_id
+    }
 
-    createStore(params, onSuccess, onFail)
+    createStore(paramsCreate, onSuccess, onFail)
   }
 
   return (
