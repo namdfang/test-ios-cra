@@ -43,17 +43,17 @@ const StoreForm = ({app_key, code}) => {
       user_id: value?.user_id ? value.user_id : shopsByUser.users[0].user_id
     }
 
-    axios({
-      method: 'get',
-      url: `${c.API_TIKTOK_SHOP}/v2/token/get`,
-      params: params
-    })
-    .then(response => {
-      console.log(">>> Success:", response);
-    })
-    .catch(error => {
-      console.log(">>> Error:", error);
-    })
+    // axios({
+    //   method: 'get',
+    //   url: `${c.API_TIKTOK_SHOP}/v2/token/get`,
+    //   params: params
+    // })
+    // .then(response => {
+    //   console.log(">>> Success:", response);
+    // })
+    // .catch(error => {
+    //   console.log(">>> Error:", error);
+    // })
 
     const onSuccess = (res) => {
       navigate('/shops');
